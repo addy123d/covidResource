@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font CDN -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Awesome -->
+    <!-- Link awesome CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>COVID Resource</title>
+</head>
+
+<body>
+    <section class="page">
+        <div class="container">
+            <div class="title">
+                <h2>Search Resources Using <i style="color: rgb(29, 161, 242);" class="fa fa-twitter"
+                        aria-hidden="true"></i></h2>
+            </div>
+            <div class="form">
+                <div class="city">
+                    <input type="text" list="cities" id="city" placeholder="Enter Your City Name">
+                    <datalist id="cities">
+                        <%for(let i=0; i< cities.length; i++){%>
+                            <option value="<%=cities[i]%>">
+                                <%}%>
+                    </datalist>
+                </div>
+
+                <div class="items">
+
+                    <div onclick="btnToggle()" class="dropbutton">
+                        Items 🔽
+                    </div>
+
+                    <div id="Dropdown" class="dropdownmenu-content">
+                        <div onclick="showItem()"><a onclick="itemclick(`Beds`)">Beds</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`ICU`)">ICU</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`Oxygen`)">Oxygen</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`Ventilator`)">Ventilator</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`Fabiflu`)">Fabiflu</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`Remdesivir`)">Remdesivir</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`Favipiravir`)">Favipiravir</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`Tocilizumab`)">Tocilizumab</a></div>
+                        <div onclick="showItem()"><a onclick="itemclick(`Plasma`)">Plasma</a></div>
+                    </div>
+                </div>
+
+                <div class="city">
+                    <input type="text" id="other_item" placeholder="Any Other Item" autocomplete="off">
+                </div>
+
+                <div class="verify">
+                    <input type="checkbox" id="verify"><label for="verify">Verified Tweets</label>
+                </div>
+
+                <div class="verify">
+                    <input type="checkbox" id="unverify"><label for="unverify">EXCLUDE unverified Tweets</label>
+                </div>
+
+                <div class="button">
+                    <button id="linkGenerate">Generate <i class="fa fa-cog" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="credits">
+            <h2><i style="color: coral;" class="fa fa-code" aria-hidden="true"></i> Made By <a
+                    href="https://aditya-pro.herokuapp.com/">Aditya
+                    Chaudhary</a></h2>
+        </div>
+
+    </section>
+
+    <!-- Essentials -->
+    <div class="members">
+        <div class="show">Essentials<span id="number">0</span></div>
+        <div class="show-2"><span id="number-2">0</span></div>
+        <ul id="list">
+        </ul>
+    </div>
+
+    <!-- Generate Link form -->
+    <div class="contain">
+        <div class="form">
+            <h2 class="linkTitle" style="font-family: 'Poppins',sans-serif;">Link <i class="fa fa-link"
+                    aria-hidden="true"></i></h2>
+            <div class="email">
+                <input type="text" name="title" id="twitter_link" readonly autocomplete="off">
+            </div>
+
+            <div class="btn">
+                <button id="button">Visit</button>
+            </div>
+
+            <div class="btn">
+                <a id="back" style="cursor: pointer;">◀</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
