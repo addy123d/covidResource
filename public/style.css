@@ -284,6 +284,7 @@ input[type=checkbox]:checked:disabled+label:before {
 .credits h2 {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.3rem;
+    opacity: 0.5;
 }
 
 .credits a {
@@ -382,7 +383,6 @@ input[type=checkbox]:checked:disabled+label:before {
 
     .credits h2 {
         font-size: .8rem;
-
     }
 
 }
