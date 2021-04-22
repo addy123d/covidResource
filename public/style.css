@@ -378,7 +378,6 @@ input[type=checkbox]:checked:disabled+label:before {
 
     .credits {
         top: 93%;
-        transform: translate(-10%, -10%);
     }
 
     .credits h2 {
