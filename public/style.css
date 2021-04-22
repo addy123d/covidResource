@@ -376,6 +376,10 @@ input[type=checkbox]:checked:disabled+label:before {
         font-size: .8rem;
     }
 
+    .credits {
+        top: 93%;
+    }
+
     .credits h2 {
         font-size: .8rem;
 
