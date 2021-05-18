@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Poppins:wght@200&family:Antonio&display=swap');
 
 * {
     margin: 0;
@@ -291,6 +291,15 @@ input[type=checkbox]:checked:disabled+label:before {
     text-decoration: none;
 }
 
+.credits p {
+    margin-top: 5%;
+    opacity: .4;
+    color: #1c1d1e;
+    font-size: 1rem;
+    font-family: 'Antonio', sans-serif;
+    text-align: center;
+}
+
 @media (max-width: 862px) {
     .members .show {
         display: none;
@@ -337,6 +346,9 @@ input[type=checkbox]:checked:disabled+label:before {
         font-size: 1rem;
     }
 
+    .credits p {
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -385,4 +397,7 @@ input[type=checkbox]:checked:disabled+label:before {
         font-size: .8rem;
     }
 
+    .credits p {
+        font-size: 0.7rem;
+    }
 }
